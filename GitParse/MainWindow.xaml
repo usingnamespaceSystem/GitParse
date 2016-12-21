@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GitParse"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="GIT Parse - list of all users" Height="350" Width="330">
+    <ListView x:Name="listView" HorizontalAlignment="Center" Height="308" VerticalAlignment="Center" Width="302" PreviewMouseLeftButtonDown="listView_PreviewMouseLeftButtonDown" Margin="10" FontSize="20" FontFamily="Verdana">
+        <ListView.View>
+            <GridView>
+                <GridViewColumn/>
+            </GridView>
+        </ListView.View>
+        <ListView.ItemContainerStyle>
+            <Style TargetType="ListViewItem">
+                <EventSetter Event="PreviewMouseLeftButtonDown" Handler="listView_PreviewMouseLeftButtonDown" />
+            </Style>
+        </ListView.ItemContainerStyle>
+    </ListView>
 </Window>
